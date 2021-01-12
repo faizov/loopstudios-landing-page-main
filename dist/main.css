@@ -1,0 +1,257 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/desktop/image-hero.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+header .menu {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .menu__list {
+  list-style: none;
+  display: flex;
+}
+header .menu__list li {
+  padding: 0 20px;
+}
+header .menu__list li a {
+  text-decoration: none;
+  color: white;
+}
+header h1 {
+  margin-top: 200px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 4em;
+  padding: 30px;
+  width: 40%;
+  border: 2px solid white;
+  text-transform: uppercase;
+}
+
+.about {
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+}
+.about__text {
+  position: absolute;
+  left: 600px;
+  bottom: 0;
+  width: 40%;
+  background: #fff;
+  padding: 80px;
+}
+.about__text h4 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+.about__text p {
+  color: #8c8c8c;
+}
+
+.products {
+  margin: 100px 0 200px 0;
+}
+.products__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.products__head h1 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.products__head button {
+  font-family: "Alata", sans-serif;
+  background: white;
+  padding: 10px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid black;
+  border-radius: 2px;
+  cursor: pointer;
+  letter-spacing: 3px;
+  transition: 0.3s;
+}
+.products__head button:hover {
+  background: black;
+  color: white;
+}
+.products__row {
+  display: flex;
+  justify-content: space-between;
+}
+.products__row__card {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  margin: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.products__row__card:hover {
+  opacity: 0.8;
+}
+.products__row__card h5 {
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2em;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  padding: 40px;
+}
+.up .products__row__card:nth-child(1) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/desktop/image-deep-earth.jpg") no-repeat;
+  background-size: cover;
+}
+.up .products__row__card:nth-child(2) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/desktop/image-night-arcade.jpg") no-repeat;
+  background-size: cover;
+}
+.up .products__row__card:nth-child(3) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/desktop/image-soccer-team.jpg") no-repeat;
+  background-size: cover;
+}
+.up .products__row__card:nth-child(4) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/desktop/image-grid.jpg") no-repeat;
+  background-size: cover;
+}
+.down .products__row__card:nth-child(1) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/desktop/image-pocket-borealis.jpg") no-repeat;
+  background-size: cover;
+}
+.down .products__row__card:nth-child(2) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/desktop/image-curiosity.jpg") no-repeat;
+  background-size: cover;
+}
+.down .products__row__card:nth-child(3) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/desktop/image-from-above.jpg") no-repeat;
+  background-size: cover;
+}
+.down .products__row__card:nth-child(4) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/desktop/image-fisheye.jpg") no-repeat;
+  background-size: cover;
+}
+
+footer {
+  background: black;
+  color: white;
+}
+footer .footer {
+  padding: 50px 0 20px 0;
+}
+footer .footer__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer__head ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+footer .footer__head ul li {
+  padding: 0 10px;
+}
+footer .footer__menu {
+  padding: 50px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer__menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+footer .footer__menu ul li {
+  padding: 0 15px 0 0;
+}
+footer .footer__menu p {
+  color: dimgray;
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header h1 {
+    font-size: 3em;
+    width: 80%;
+  }
+  header .menu {
+    display: block;
+  }
+  header .menu__list {
+    display: none;
+  }
+
+  .about {
+    display: block;
+  }
+  .about img {
+    width: 100%;
+  }
+  .about__text {
+    position: relative;
+    left: auto;
+    width: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  .about__text h4 {
+    font-size: 2.5em;
+  }
+
+  .products__head {
+    display: block;
+  }
+  .products__head h1 {
+    text-align: center;
+  }
+  .products__row {
+    display: block;
+  }
+  .products__row__card {
+    width: 100%;
+    height: 150px;
+  }
+}

@@ -41,6 +41,9 @@ header .menu__list li a {
   text-decoration: none;
   color: white;
 }
+header .menu .hamburger-menu {
+  display: none;
+}
 header h1 {
   margin-top: 200px;
   font-family: "Josefin Sans", sans-serif;
@@ -80,6 +83,25 @@ header h1 {
 .products {
   margin: 100px 0 200px 0;
 }
+.products button {
+  font-family: "Alata", sans-serif;
+  background: white;
+  padding: 10px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid black;
+  border-radius: 2px;
+  cursor: pointer;
+  letter-spacing: 3px;
+  transition: 0.3s;
+}
+.products button:hover {
+  background: black;
+  color: white;
+}
+.products .btn-mob {
+  display: none;
+}
 .products__head {
   display: flex;
   justify-content: space-between;
@@ -92,22 +114,6 @@ header h1 {
   font-weight: 300;
   font-size: 2em;
   margin-bottom: 20px;
-}
-.products__head button {
-  font-family: "Alata", sans-serif;
-  background: white;
-  padding: 10px 30px;
-  font-weight: 600;
-  text-transform: uppercase;
-  border: 1px solid black;
-  border-radius: 2px;
-  cursor: pointer;
-  letter-spacing: 3px;
-  transition: 0.3s;
-}
-.products__head button:hover {
-  background: black;
-  color: white;
 }
 .products__row {
   display: flex;
@@ -218,9 +224,14 @@ footer .footer__menu p {
   }
   header .menu {
     display: block;
+    display: flex;
+    align-items: center;
   }
   header .menu__list {
     display: none;
+  }
+  header .menu .hamburger-menu {
+    display: block;
   }
 
   .about {
@@ -240,6 +251,9 @@ footer .footer__menu p {
     font-size: 2em;
   }
 
+  .products {
+    margin: 100px 0;
+  }
   .products__head {
     display: block;
   }
@@ -252,6 +266,15 @@ footer .footer__menu p {
   .products__row__card {
     width: 100%;
     height: 150px;
+  }
+  .products .btn-desk {
+    display: none;
+  }
+  .products .btn-mob {
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   footer .footer {
@@ -279,4 +302,89 @@ footer .footer__menu p {
   footer .footer__menu ul li {
     padding: 10px 0;
   }
+}
+#menu__toggle {
+  display: none;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition-duration: 0.25s;
+}
+
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 45px 30px;
+  background-color: black;
+  color: white;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.25s;
+}
+.menu__box ul {
+  margin-top: 100px;
+  list-style: none;
+}
+
+.menu__item {
+  font-family: "Josefin Sans", sans-serif;
+  display: block;
+  padding: 12px 0;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition-duration: 0.25s;
 }

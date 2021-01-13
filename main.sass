@@ -13,10 +13,10 @@ $image1: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images
 $image2: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images/desktop/image-night-arcade.jpg') no-repeat
 $image3: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images/desktop/image-soccer-team.jpg') no-repeat
 $image4: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images/desktop/image-grid.jpg') no-repeat
-$image7: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images/desktop/image-from-above.jpg') no-repeat
-$image5: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images/desktop/image-pocket-borealis.jpg') no-repeat
+$image5: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images/desktop/image-from-above.jpg') no-repeat
 $image6: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images/desktop/image-curiosity.jpg') no-repeat
-$image8: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images/desktop/image-fisheye.jpg') no-repeat
+$image7: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images/desktop/image-fisheye.jpg') no-repeat
+$image8: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images/desktop/image-pocket-borealis.jpg') no-repeat
 
     
 *
@@ -27,6 +27,18 @@ $image8: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/images
 a
     color: $white
     text-decoration: none
+    position: relative
+
+    &.list:hover::after
+        content: ''
+        width: 45%
+        height: 2px
+        background: $white
+        position: absolute
+        bottom: -13px
+        left: 0
+        right: 0
+        margin: 0 auto
 
 body
     font-family: 'Alata', sans-serif
